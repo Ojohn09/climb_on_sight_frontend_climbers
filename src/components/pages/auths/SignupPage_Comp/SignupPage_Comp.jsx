@@ -19,7 +19,7 @@ const SignupPageComp = () => {
 
     return (
         <main className="h-screen w-full p-4 bg-[#FBF7F4] flex items-center gap-4">
-            <div className="h-full w-[36%] bg-[url('src/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl" />
+            <div className="h-full w-[36%] bg-[url('/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl" />
 
             <div className="h-full w-[64%] bg-white flex items-center justify-center rounded-2xl">
                 
@@ -52,19 +52,14 @@ const SignupPageComp = () => {
                         >
                             { (showPassword)
                                 ? <span className="mr-4">
-                                    <div className="h-5 w-5 bg-[url('src/assets/images/icons/eye_close.png')] bg-no-repeat bg-cover bg-center" />
+                                    <div className="h-5 w-5 bg-[url('/assets/images/icons/eye_close.png')] bg-no-repeat bg-cover bg-center" />
                                 </span>
                                 : <span className="mr-4">
-                                    <div className="h-5 w-5 bg-[url('src/assets/images/icons/eye.png')] bg-no-repeat bg-cover bg-center" />
+                                    <div className="h-5 w-5 bg-[url('/assets/images/icons/eye.png')] bg-no-repeat bg-cover bg-center" />
                                 </span>
                                 }
                         </span>
                     </div>
-
-                    <p className="mt-3 text-right text-[#E27A30]">
-                        <Link to="#">Forgot Password?</Link>
-                    </p>
-                    
 
                     <button type="submit" onClick={ (event) => handleSignUp(event) }
                             className="w-full min-w-fit max-w-[500px] bg-black mt-16 font-medium text-lg text-white rounded-2xl inline-block py-2 md:py-3 shadow-lg shadow-gray-300 transition duration-150 ease-in-out">

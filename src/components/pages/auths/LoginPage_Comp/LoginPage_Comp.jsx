@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-// import ClimberImage from "../../../../assets/images/climber_image.png";
 
 import { handleInputChange, toggleShowPassword } from "../../../../redux/features/auths/Auths_Slice";
 
@@ -14,7 +13,7 @@ const LoginPageComp = () => {
     const handleLogin = (event) => {
         event.preventDefault();
 
-        navigate("#");
+        navigate("/dashboard");
     };
 
 
@@ -23,7 +22,7 @@ const LoginPageComp = () => {
             <div 
                 // className="h-full w-[40%] bg-gray-300 bg-no-repeat bg-cover bg-center rounded-2xl"
                 // style={{ backgroundImage: `url(${ClimberImage})` }}
-                className="h-full w-[36%] bg-[url('src/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl"
+                className="h-full w-[36%] bg-[url('assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl"
             />
 
             <div className="h-full w-[64%] bg-white flex items-center justify-center rounded-2xl">
@@ -57,10 +56,10 @@ const LoginPageComp = () => {
                         >
                             { (showPassword)
                                 ? <span className="mr-4">
-                                    <div className="h-5 w-5 bg-[url('src/assets/images/icons/eye_close.png')] bg-no-repeat bg-cover bg-center" />
+                                    <div className="h-5 w-5 bg-[url('/assets/images/icons/eye_close.png')] bg-no-repeat bg-cover bg-center" />
                                 </span>
                                 : <span className="mr-4">
-                                    <div className="h-5 w-5 bg-[url('src/assets/images/icons/eye.png')] bg-no-repeat bg-cover bg-center" />
+                                    <div className="h-5 w-5 bg-[url('/assets/images/icons/eye.png')] bg-no-repeat bg-cover bg-center" />
                                 </span>
                             }
                         </span>
