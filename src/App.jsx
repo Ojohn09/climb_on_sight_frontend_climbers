@@ -12,6 +12,9 @@ import SignupPageStepThreeComp from "./components/pages/auths/SignupPage_Comp/Si
 import SignupPageStepFourComp from "./components/pages/auths/SignupPage_Comp/SignupPageStepFour_Comp";
 import SignupPageStepFiveComp from "./components/pages/auths/SignupPage_Comp/SignupPageStepFive_Comp";
 import ReviewPageComp from "./components/pages/auths/ReviewPage_Comp/ReviewPage_Comp";
+import DashboardView from "./views/Dashboard_View";
+import EventsView from "./views/Events_View";
+import GuidesView from "./views/Guides_View";
 
 function App() {
 
@@ -20,7 +23,7 @@ function App() {
       <Router>
         <Routes>
 
-          {/*========== Auth Pages ==========*/}
+          {/* ========== Auth Pages ========== */}
           <Route path="/login" element={ <LoginPageComp /> } />
           <Route path="/signup" element={ <SignupPageComp /> } />
           <Route path="/signup_step_one" element={ <SignupPageStepOneComp /> } />
@@ -30,6 +33,18 @@ function App() {
           <Route path="/signup_step_five" element={ <SignupPageStepFiveComp /> } />
 
           <Route path="/review" element={ <ReviewPageComp /> } />
+
+          {/* ========== Dashboard ========== */}
+          <Route path="/" element={ <Navigate to="/dashboard" /> } />
+          <Route path="/dashboard" element={ <DashboardView /> } />
+
+
+          {/* ========== Events ========== */}
+          <Route path="/events" element={ <EventsView /> } />
+
+
+          {/* ========== Guides ========== */}
+          <Route path="/guides" element={ <GuidesView /> } />
         </Routes>
       </Router>
 

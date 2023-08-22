@@ -27,7 +27,7 @@ const SignupPageStepOneComp = () => {
 
     return (
         <main className="h-screen w-full p-4 bg-[#FBF7F4] flex items-center gap-4">
-            <div className="h-full w-[36%] bg-[url('src/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl" />
+            <div className="h-full w-[36%] bg-[url('/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl" />
 
             <div className="h-full w-[64%] bg-white flex items-center justify-center rounded-2xl">
                 
@@ -39,16 +39,16 @@ const SignupPageStepOneComp = () => {
                     <div className="mt-16 flex items-start">
                         <div>
                             <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                                <img src="src/assets/images/icons/user_white.png" alt="User Icon" />
+                                <img src="/assets/images/icons/user_white.png" alt="User Icon" />
                             </div>
                             <p className="mt-2 text-xs text-center">Personal <br /> Infomation</p>
                         </div>
 
-                        <hr className="h-[3px] w-14 mt-8 mt-8 bg-slate-100 border-slate-100" />
+                        <hr className="h-[3px] w-14 mt-8 bg-slate-100 border-slate-100" />
 
                         <div>
                             <div className="h-16 w-16 grid place-content-center border border-slate-200 rounded-full">
-                                <img src="src/assets/images/icons/contact.png" alt="Contact Icon" />
+                                <img src="/assets/images/icons/contact.png" alt="Contact Icon" />
                             </div>
                             <p className="mt-2 text-xs text-center text-slate-300">Contact</p>
                         </div>
@@ -57,7 +57,7 @@ const SignupPageStepOneComp = () => {
 
                         <div>
                             <div className="h-16 w-16 grid place-content-center border border-slate-200 rounded-full">
-                                <img src="src/assets/images/icons/hill.png" alt="Hill Icon" />
+                                <img src="/assets/images/icons/hill.png" alt="Hill Icon" />
                             </div>
                             <p className="mt-2 text-xs text-center text-slate-300">Climbing <br /> Experience</p>
                         </div>
@@ -66,7 +66,7 @@ const SignupPageStepOneComp = () => {
 
                         <div>
                             <div className="h-16 w-16 grid place-content-center border border-slate-200 rounded-full">
-                                <img src="src/assets/images/icons/fun.png" alt="Fun Icon" />
+                                <img src="/assets/images/icons/fun.png" alt="Fun Icon" />
                             </div>
                             <p className="mt-2 text-xs text-center text-slate-300">Fun Facts</p>
                         </div>
@@ -75,7 +75,7 @@ const SignupPageStepOneComp = () => {
 
                         <div>
                             <div className="h-16 w-16 grid place-content-center border border-slate-200 rounded-full">
-                                <img src="src/assets/images/icons/skill.png" alt="Skill Icon" />
+                                <img src="/assets/images/icons/skill.png" alt="Skill Icon" />
                             </div>
                             <p className="mt-2 text-xs text-center text-slate-300">Interestd <br /> New Skills</p>
                         </div>
