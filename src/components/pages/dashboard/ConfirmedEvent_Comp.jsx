@@ -18,7 +18,7 @@ const ConfirmedEventComp = () => {
             <div className="mt-3 grid grid-cols-3 gap-4">
                 { eventCardItems.map((eachEventItem) => (
                     <div key={ eachEventItem.id } className="p-4 bg-white rounded-xl">
-                        <img src={ eachEventItem.image } alt={ eachEventItem.image } />
+                        <div className={`h-[90px] lg:h-[120px] xl:h-[190px] w-full mt-2 relative bg-[url('${ eachEventItem.image }')] bg-no-repeat bg-center bg-cover rounded-xl`} />
 
                         <div className="mt-3 flex items-center justify-between font-semibold">
                             <h3>{ eachEventItem.title }</h3>

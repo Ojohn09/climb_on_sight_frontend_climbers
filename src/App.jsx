@@ -15,6 +15,7 @@ import ReviewPageComp from "./components/pages/auths/ReviewPage_Comp/ReviewPage_
 import DashboardView from "./views/Dashboard_View";
 import EventsView from "./views/Events_View";
 import GuidesView from "./views/Guides_View";
+import LoadingWidget from "./components/widgets/Loading_Widget";
 
 function App() {
 
@@ -43,8 +44,16 @@ function App() {
           <Route path="/events" element={ <EventsView /> } />
 
 
+          {/* ========== Events ========== */}
+          <Route path="/events_based_on_selection" element={ <EventsView /> } />
+
+
           {/* ========== Guides ========== */}
           <Route path="/guides" element={ <GuidesView /> } />
+
+
+          {/* ========== Messages ========== */}
+          <Route path="/messages" element={ <LoadingWidget /> } />
         </Routes>
       </Router>
 
