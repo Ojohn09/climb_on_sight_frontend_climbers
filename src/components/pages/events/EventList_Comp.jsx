@@ -3,15 +3,15 @@
 const EventListComp = () => {
 
     const eventCardItems = [
-        { id: "01", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "02", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "03", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "04", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "05", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "07", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "08", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "09", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
+        { id: "01", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/climber_image.png", },
+        { id: "02", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/mountain_climbers.png", },
+        { id: "03", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/climber_image.png", },
+        { id: "04", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/mountain_climbers.png", },
+        { id: "05", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/climber_image.png", },
+        { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/mountain_climbers.png", },
+        { id: "07", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/climber_image.png", },
+        { id: "08", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/mountain_climbers.png", },
+        { id: "09", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/climber_image.png", },
     ];
 
     return (
