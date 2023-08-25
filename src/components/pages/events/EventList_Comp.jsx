@@ -9,18 +9,18 @@ const EventListComp = () => {
         { id: "04", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
         { id: "05", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
         { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
-        { id: "06", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
+        { id: "07", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
+        { id: "08", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
+        { id: "09", title: "Climb off", amount: "$243", date: "June 19", time: "02:00 PM", location: "23 victoria avenue", image: "/assets/images/profile_picture_land_scape.png", },
     ];
 
     return (
-        <section className="mt-8">
+        <section className="mt-4 pb-16">
 
-            <div className="mt-3 grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4">
                 { eventCardItems.map((eachEventItem) => (
                     <div key={ eachEventItem.id } className="p-4 bg-white rounded-xl">
-                        <img src={ eachEventItem.image } alt={ eachEventItem.image } />
+                        <div className={`h-[90px] lg:h-[120px] xl:h-[190px] w-full mt-2 relative bg-[url('${ eachEventItem.image }')] bg-no-repeat bg-center bg-cover rounded-xl`} />
 
                         <div className="mt-3 flex items-center justify-between font-semibold">
                             <h3>{ eachEventItem.title }</h3>

@@ -6,20 +6,20 @@ const GuideListComp = () => {
         { id: "01", guideName: "Alexander Davis", image: "/assets/images/climber_image.png", },
         { id: "02", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
         { id: "03", guideName: "Alexander Davis", image: "/assets/images/climber_image.png", },
-        { id: "04", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
+        { id: "04", guideName: "Alexander Davis", image: "/assets/images/profile_picture_land_scape.png", },
         { id: "05", guideName: "Alexander Davis", image: "/assets/images/climber_image.png", },
-        { id: "06", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
-        { id: "06", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
-        { id: "06", guideName: "Alexander Davis", image: "/assets/images/climber_image.png", },
-        { id: "06", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
+        { id: "06", guideName: "Alexander Davis", image: "/assets/images/profile_picture_land_scape.png", },
+        { id: "07", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
+        { id: "08", guideName: "Alexander Davis", image: "/assets/images/climber_image.png", },
+        { id: "09", guideName: "Alexander Davis", image: "/assets/images/mountain_climbers.png", },
     ];
 
     return (
         <section className="mt-8">
 
-            <div className="mt-3 grid grid-cols-3 gap-4">
+            <div className="mt-3 grid grid-cols-3 xl:grid-cols-4 gap-4">
                 { eventGuideItems.map((eachGuideItem) => (
-                    <div className={`h-[190px] w-full mt-2 relative bg-[url('${ eachGuideItem.image }')] bg-no-repeat bg-top bg-cover rounded-xl`}>
+                    <div key={ eachGuideItem.id } className={`h-[190px] w-full mt-2 relative bg-[url('${ eachGuideItem.image }')] bg-no-repeat bg-center bg-cover rounded-xl`}>
                         <div className="h-auto w-full px-3 py-2 flex items-center gap-3 absolute bottom-0 backdrop-blur-[5px] bg-white/30 rounded-xl text-white">
                             <div>
                                 <p className="font-medium text-[0.8rem]">{ eachGuideItem.guideName }</p>
@@ -27,7 +27,7 @@ const GuideListComp = () => {
                             </div>
 
                             <Link to="/guides">
-                                <p className="h-6 w-6 flex items-center justify-center bg-black rounded-full">{ ">" }</p>
+                                <img src="/assets/images/icons/navigator.png" alt="Navigator Icon" className="h-auto w-6 p-1.5 bg-black rounded-full" />
                             </Link>
                         </div>
                     </div>
