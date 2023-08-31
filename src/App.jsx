@@ -20,7 +20,7 @@ import LoadingWidget from "./components/widgets/Loading_Widget";
 function App() {
 
   return (
-    <main className="App bg-gray-100">
+    <main className="bg-gray-100">
       <Router>
         <Routes>
 

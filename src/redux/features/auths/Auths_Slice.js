@@ -54,6 +54,7 @@ export const authsSlice = createSlice({
         },
         handleUpdateSkills: (state, action) => {
             state.mySkills.push(state.skill);
+            state.skill = "";
         },
     }
 });

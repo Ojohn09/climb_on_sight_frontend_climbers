@@ -10,9 +10,9 @@ const CounterComp = () => {
     ];
 
     return (
-        <section className="grid grid-cols-4 gap-5">
+        <section className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             { counterItems.map((eachCounterItem) => (
-                <div key={ eachCounterItem.id } className={`h-auto w-full ${eachCounterItem.bgColor} relative rounded-xl p-5 shadow-sm`}>
+                <div key={ eachCounterItem.id } className={`h-auto w-full ${eachCounterItem.bgColor} relative rounded-xl px-5 py-4 shadow-sm`}>
                    
                     <h3 className="pt-1 font-medium text-center text-2xl">{ eachCounterItem.count }</h3>
                     <p className="font-normal text-center text-sm">{ eachCounterItem.title }</p>

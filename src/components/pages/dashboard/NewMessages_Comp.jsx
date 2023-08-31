@@ -10,10 +10,10 @@ const NewMessagesComp = () => {
     ];
 
     return (
-        <section className="mt-8">
-            <h3 className="font-medium text-xl">Confirmed Events</h3>
+        <section>
+            <h3 className="font-medium text-xl">New Messages</h3>
 
-            <div className="mt-3 grid grid-cols-2 gap-4 gap-y-7 p-5 bg-white rounded-2xl">
+            <div className="mt-1 grid grid-cols-2 gap-x-10 gap-y-6 px-5 py-3 bg-white rounded-2xl">
                 { messageItems.map((eachMessageItem) => (
                     <div key={ eachMessageItem.id } className="flex items-center gap-2">
 

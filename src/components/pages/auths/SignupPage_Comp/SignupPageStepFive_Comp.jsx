@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { handleInputChange } from "../../../../redux/features/auths/Auths_Slice";
 
+/* ==== Import Components ==== */
+import StepperComp from "../Stepper_Comp/Stepper_Comp";
 
 
 const SignupPageStepFiveComp = () => {
@@ -18,76 +20,32 @@ const SignupPageStepFiveComp = () => {
     };
 
   return (
-    <main className="h-screen w-full p-4 bg-[#FBF7F4] flex items-center gap-4">
-        <div className="h-full w-[36%] bg-[url('/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl" />
+    <main className="h-screen w-full lg:p-4 bg-[#FBF7F4] flex items-center gap-4">
+        <div className="h-full w-[36%] bg-[url('/assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl hidden lg:block" />
 
-        <div className="h-full w-[64%] bg-white flex items-center justify-center rounded-2xl">
+        <div className="h-full w-full lg:w-[64%] bg-white flex items-center justify-center rounded-2xl">
             
             {/* ==== Form ==== */}
-            <form onSubmit={ (event) => handleContinue(event) } className="h-auto min-w-[400px] flex flex-col items-center justify-center">
+            <form onSubmit={ (event) => handleContinue(event) } className="h-auto w-full lg:min-w-[500px] px-5 flex flex-col items-center justify-center">
                 <h4 className="font-medium">CLIMB ONSIGHT</h4>
 
                 {/* ==== Stepper ==== */}
-                <div className="mt-20 flex items-start">
-                    <div>
-                        <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                            <img src="/assets/images/icons/user_white.png" alt="User Icon" />
-                        </div>
-                        <p className="mt-2 text-xs text-center">Personal <br /> Infomation</p>
-                    </div>
+                <StepperComp />
 
-                    <hr className="h-[3px] w-14 mt-8 bg-black border-slate-100" />
-
-                    <div>
-                        <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                            <img src="/assets/images/icons/contact_white.png" alt="Contact Icon" />
-                        </div>
-                        <p className="mt-2 text-xs text-center">Contact</p>
-                    </div>
-
-                    <hr className="h-[3px] w-14 mt-8 bg-black border-slate-100" />
-
-                    <div>
-                        <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                            <img src="/assets/images/icons/hill_white.png" alt="Hill Icon" />
-                        </div>
-                        <p className="mt-2 text-xs text-center">Climbing <br /> Experience</p>
-                    </div>
-
-                    <hr className="h-[3px] w-14 mt-8 bg-black border-slate-100" />
-
-                    <div>
-                        <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                            <img src="/assets/images/icons/fun_white.png" alt="Fun Icon" />
-                        </div>
-                        <p className="mt-2 text-xs text-center">Fun Facts</p>
-                    </div>
-
-                    <hr className="h-[3px] w-14 mt-8 bg-black border-slate-100" />
-
-                    <div>
-                        <div className="h-16 w-16 grid place-content-center bg-black rounded-full">
-                            <img src="/assets/images/icons/skill_white.png" alt="Skill Icon" />
-                        </div>
-                        <p className="mt-2 text-xs text-center">Interestd <br /> New Skills</p>
-                    </div>
-                </div>
-
-                <h1 className="mt-16 text-2xl">New Skills</h1>
+                <h1 className="mt-16 text-xl lg:text-2xl">New Skills</h1>
 
                 <div className="h-auto w-full min-w-fit max-w-[450px] mt-10 form-group">
-                    <label htmlFor="newSkill">Add new skills you would like to learn:</label>
-                    <textarea name="newSkill" value={ newSkill } rows="6"
-                            onChange={ (event) => dispatch(handleInputChange({ name: event.target.name, value: event.target.value })) }
-                            className="h-auto w-full mt-3 bg-gray-50 bg-clip-padding border border-gray-200 rounded-2xl font-normal resize-none text-base px-4 py-3 lg:py-4
-                                focus:bg-white focus:border-gray-400 focus:outline-none"
-                            placeholder="Comment here..."
+                    <label htmlFor="newSkill" className="text-sm lg:text-base">Add new skills you would like to learn:</label>
+                    <textarea name="newSkill" value={ newSkill }
+                        onChange={ (event) => dispatch(handleInputChange({ name: event.target.name, value: event.target.value })) }
+                        className="h-[120px] lg:h-[150px] w-full mt-3 bg-gray-50 bg-clip-padding border border-gray-200 rounded-2xl font-normal resize-none text-base px-4 py-3 lg:py-4
+                            focus:bg-white focus:border-gray-400 focus:outline-none"
+                        placeholder="Comment here..."
                     />
                 </div>
 
-
                 <button type="submit" onClick={ (event) => handleContinue(event) }
-                        className="h-auto w-full min-w-fit max-w-[450px] bg-black mt-20 font-medium text-lg text-white rounded-2xl inline-block py-2 md:py-3 shadow-lg shadow-gray-300 transition duration-150 ease-in-out">
+                        className="h-auto w-full min-w-fit max-w-[450px] py-4 bg-black mt-7 lg:mt-16 font-medium text-lg text-white rounded-2xl inline-block shadow-lg shadow-gray-300 transition duration-150 ease-in-out">
                     {
                         "Continue" // (isLoading) ? ("Please wait...") : ("Continue")
                     }

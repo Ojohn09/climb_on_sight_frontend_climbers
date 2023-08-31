@@ -18,17 +18,13 @@ const LoginPageComp = () => {
 
 
     return (
-        <main className="h-screen w-full p-4 bg-[#FBF7F4] flex items-center gap-4">
-            <div 
-                // className="h-full w-[40%] bg-gray-300 bg-no-repeat bg-cover bg-center rounded-2xl"
-                // style={{ backgroundImage: `url(${ClimberImage})` }}
-                className="h-full w-[36%] bg-[url('assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl"
-            />
+        <main className="h-screen w-full lg:p-4 bg-[#FBF7F4] flex items-center gap-4">
+            <div className="h-full w-[36%] bg-[url('assets/images/climber_image.png')] bg-no-repeat bg-cover bg-center rounded-2xl hidden lg:block" />
 
-            <div className="h-full w-[64%] bg-white flex items-center justify-center rounded-2xl">
+            <div className="h-full w-full lg:w-[64%] bg-white flex items-center justify-center rounded-2xl">
                 
                 {/* ==== Form ==== */}
-                <form onSubmit={ (event) => handleLogin(event) } className="h-auto min-w-[400px] text-center">
+                <form onSubmit={ (event) => handleLogin(event) } className="h-auto w-full lg:w-[450px] px-5 text-center">
                     <h4 className="font-medium">CLIMB ONSIGHT</h4>
 
                     <h1 className="mt-28 mb-4 font-bold text-6xl">Welcome</h1>
@@ -37,7 +33,7 @@ const LoginPageComp = () => {
                     <div className="h-auto w-full min-w-fit max-w-[500px] mt-12 form-group">
                         <input type="text" name="email" value={ email }
                                 onChange={ (event) => dispatch(handleInputChange({ name: event.target.name, value: event.target.value })) }
-                                className="h-auto w-full block bg-gray-50 bg-clip-padding border border-gray-200 rounded-2xl font-normal text-base px-3 py-3 lg:py-4
+                                className="h-auto w-full block bg-gray-50 bg-clip-padding px-4 py-4 border border-gray-200 rounded-xl font-normal text-base
                                     focus:bg-white focus:border-gray-400 focus:outline-none"
                                 placeholder="Email"
                         />
@@ -46,7 +42,7 @@ const LoginPageComp = () => {
                     <div className="h-auto w-full min-w-fit max-w-[500px] mt-8 form-group relative">
                         <input type={ (showPassword) ? "text" : "password" } name="password" value={ password }
                                 onChange={ (event) => dispatch(handleInputChange({ name: event.target.name, value: event.target.value })) }
-                                className="h-auto w-full block bg-gray-50 bg-clip-padding border border-gray-200 rounded-2xl font-normal text-base px-4 py-3 lg:py-4
+                                className="h-auto w-full block bg-gray-50 bg-clip-padding px-4 py-4 border border-gray-200 rounded-xl font-normal text-base
                                     focus:bg-white focus:border-gray-400 focus:outline-none"
                                 placeholder="Password"
                         />
@@ -65,19 +61,19 @@ const LoginPageComp = () => {
                         </span>
                     </div>
 
-                    <p className="mt-3 text-right text-[#E27A30]">
+                    <p className="mt-3 text-right text-[#E27A30] text-sm lg:text-base">
                         <Link to="#">Forgot Password?</Link>
                     </p>
                     
 
                     <button type="submit" onClick={ (event) => handleLogin(event) }
-                            className="w-full min-w-fit max-w-[500px] bg-black mt-16 font-medium text-lg text-white rounded-2xl inline-block py-2 md:py-3 shadow-lg shadow-gray-300 transition duration-150 ease-in-out">
+                            className="h-auto w-full min-w-fit max-w-[450px] py-4 bg-black mt-7 lg:mt-16 font-medium text-lg text-white rounded-2xl inline-block shadow-lg shadow-gray-300 transition duration-150 ease-in-out">
                         {
                             "Continue" // (isLoading) ? ("Please wait...") : ("Continue")
                         }
                     </button>
 
-                    <p className="mt-8 flex justify-center">Dont Have An Account?
+                    <p className="mt-5 flex justify-center text-sm lg:text-base">Dont Have An Account?
                         <Link to="/signup" className="ml-2 text-right text-[#E27A30]">Sign Up</Link>
                     </p>
                 </form>

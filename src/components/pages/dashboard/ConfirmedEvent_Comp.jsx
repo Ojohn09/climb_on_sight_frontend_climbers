@@ -12,20 +12,20 @@ const ConfirmedEventComp = () => {
     ];
 
     return (
-        <section className="mt-8">
-            <h3 className="font-medium text-xl">Confirmed Events</h3>
+        <section>
+            <h3 className="font-medium text-lg lg:text-xl">Confirmed Events</h3>
 
-            <div className="mt-3 grid grid-cols-3 gap-4">
+            <div className="mt-1 grid grid-cols-2 lg:grid-cols-3 gap-4">
                 { eventCardItems.map((eachEventItem) => (
-                    <div key={ eachEventItem.id } className="p-4 bg-white rounded-xl">
-                        <div className={`h-[90px] lg:h-[120px] xl:h-[190px] w-full mt-2 relative bg-[url('${ eachEventItem.image }')] bg-no-repeat bg-center bg-cover rounded-xl`} />
+                    <div key={ eachEventItem.id } className="px-4 py-3 bg-white rounded-xl">
+                        <div className={`h-[80px] lg:h-[90px] xl:h-[140px] w-full relative bg-[url('${ eachEventItem.image }')] bg-no-repeat bg-center bg-cover rounded-xl`} />
 
-                        <div className="mt-3 flex items-center justify-between font-semibold">
+                        <div className="mt-2 flex items-center justify-between font-semibold text-sm lg:text-base">
                             <h3>{ eachEventItem.title }</h3>
                             <h3>{ eachEventItem.amount }</h3>
                         </div>
 
-                        <div className='mt-2 flex items-center justify-between text-xs'>
+                        <div className='mt-1 flex items-center justify-between text-[0.6rem] lg:text-xs'>
                             <div>
                                 <p className='text-gray-400'>Date</p>
                                 <p>{ eachEventItem.date }</p>
